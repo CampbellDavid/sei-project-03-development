@@ -1,4 +1,5 @@
-$pale: rgb(245, 238, 226);
+// $pale: rgb(245, 238, 226);
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 // Common
 
@@ -73,9 +74,28 @@ $pale: rgb(245, 238, 226);
 	height: max-content;
 	width: max-content;
 	padding: 50px;
-	background-color: #ffffff30;
+	background-color: #ffffff70;
 	border: 2px solid #ffffff;
 	border-radius: 5px;
+}
+
+.font {
+	font-family: 'Playfair Display', serif;
+}
+
+.text-1 {
+	font-size: 40px;
+	color: #000000;
+}
+
+.text-2 {
+	font-size: 30px;
+	color: #000000;
+}
+
+.text-3 {
+	font-size: 18px;
+	color: #000000;
 }
 
 .center-x {

@@ -32,7 +32,7 @@ export default class Login extends React.Component {
 			<div className='bg-image'>
 				<div className='bg-fade center-x center-y'>
 					<section className='form'>
-						<h1>Login Here</h1>
+						<h1 className='font text-1'>Login Here</h1>
 						<form onSubmit={this.handleSubmit}>
 							<div className='form-div'>
 								<input
