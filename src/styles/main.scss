@@ -8,42 +8,42 @@ $pale: rgb(245, 238, 226);
 	padding: 0;
 }
 
-h1 {
-	font-family: 'Kranky', cursive;
-	font-size: 44px;
-	text-align: center;
-	color: $pale;
-	padding: 10px;
-	margin: 10px;
-}
+// h1 {
+// 	font-family: 'Kranky', cursive;
+// 	font-size: 44px;
+// 	text-align: center;
+// 	color: $pale;
+// 	padding: 10px;
+// 	margin: 10px;
+// }
 
 .unknown-route {
 	color: black;
 }
 
-body {
-	background: rgb(0, 36, 27);
-	background: linear-gradient(
-			180deg,
-			rgba(0, 36, 27, 1) 11%,
-			rgba(9, 121, 108, 1) 65%,
-			rgba(0, 255, 254, 1) 100%
-		)
-		fixed;
-	min-height: 100%;
-	background-repeat: no-repeat;
-	background-size: contain;
-}
+// body {
+// 	background: rgb(0, 36, 27);
+// 	background: linear-gradient(
+// 			180deg,
+// 			rgba(0, 36, 27, 1) 11%,
+// 			rgba(9, 121, 108, 1) 65%,
+// 			rgba(0, 255, 254, 1) 100%
+// 		)
+// 		fixed;
+// 	min-height: 100%;
+// 	background-repeat: no-repeat;
+// 	background-size: contain;
+// }
 
-section {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+// section {
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// }
 
-li {
-	list-style: none;
-}
+// li {
+// 	list-style: none;
+// }
 
 // Home
 
@@ -52,7 +52,7 @@ li {
 	min-height: 100vh;
 }
 
-.home {
+.bg-image {
 	background-image: url(../assets/images/pub.png);
 	background-attachment: fixed;
 	background-position: center;
@@ -67,6 +67,25 @@ li {
 	justify-content: center;
 	align-items: center;
 	margin: 0;
+}
+
+.form {
+	height: max-content;
+	width: max-content;
+	padding: 50px;
+	background-color: #ffffff30;
+	border: 2px solid #ffffff;
+	border-radius: 5px;
+}
+
+.center-x {
+	display: flex;
+	justify-content: center;
+}
+
+.center-y {
+	display: flex;
+	align-items: center;
 }
 
 // Nav
