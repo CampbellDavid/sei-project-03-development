@@ -7,6 +7,7 @@ const TeamForm = ({ handleChange, handleSubmit }) => {
 			<form onSubmit={handleSubmit} className='text-center'>
 				<div>
 					<input
+						className='p-2 m-2 font no-line width-80 rounded'
 						onChange={handleChange}
 						placeholder='Team Name'
 						name='teamName'
@@ -14,11 +15,7 @@ const TeamForm = ({ handleChange, handleSubmit }) => {
 					/>
 				</div>
 
-				<button
-					className='m-2 font btn btn-dark'
-					type='submit'
-					disabled={!this.state.formValid}
-				>
+				<button className='m-2 font btn btn-dark' type='submit'>
 					Submit
 				</button>
 			</form>
