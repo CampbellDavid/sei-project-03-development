@@ -57,11 +57,10 @@ const EventForm = ({ data, handleChange, handleSubmit }) => {
 						required
 					/>
 				</div>
-				<div className='button-div'>
-					<button className='m-2 font btn btn-dark' type='submit'>
-						Submit
-					</button>
-				</div>
+
+				<button className='m-2 font btn btn-dark' type='submit'>
+					Submit
+				</button>
 			</form>
 		</div>
 	)

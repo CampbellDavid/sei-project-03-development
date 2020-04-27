@@ -199,15 +199,14 @@ export default class Register extends React.Component {
 										fieldName='image'
 									/>
 								</div>
-								<div className='button-div'>
-									<button
-										className='m-2 font btn btn-dark'
-										type='submit'
-										disabled={!this.state.formValid}
-									>
-										Register
-									</button>
-								</div>
+
+								<button
+									className='m-2 font btn btn-dark'
+									type='submit'
+									disabled={!this.state.formValid}
+								>
+									Register
+								</button>
 							</form>
 						</section>
 					</div>
