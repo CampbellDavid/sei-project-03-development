@@ -60,6 +60,7 @@ const ProfileForm = ({ user, handleChange, handleSubmit }) => {
 
 				<div>
 					<select
+						className='p-2 m-2 font no-line width-80 rounded'
 						onChange={handleChange}
 						placeholder='Gender'
 						name='gender'
@@ -87,11 +88,7 @@ const ProfileForm = ({ user, handleChange, handleSubmit }) => {
 					<ImageUpload handleChange={handleChange} fieldName='image' />
 				</div>
 
-				<button
-					className='m-2 font btn btn-dark'
-					type='submit'
-					disabled={!this.state.formValid}
-				>
+				<button className='m-2 font btn btn-dark' type='submit'>
 					Submit
 				</button>
 			</form>
