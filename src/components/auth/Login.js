@@ -31,29 +31,30 @@ export default class Login extends React.Component {
 		return (
 			<div className='bg-image'>
 				<div className='bg-fade center-x center-y'>
-					<section className='form'>
+					<section className='form text-center'>
 						<h1 className='font text-1'>Login Here</h1>
-						<form onSubmit={this.handleSubmit}>
-							<div className='form-div'>
+						<form onSubmit={this.handleSubmit} className='text-center'>
+							<div>
 								<input
-									placeholder='email'
+									className='p-2 m-2 font'
+									placeholder='Email'
 									name='email'
 									onChange={this.handleChange}
 								/>
 							</div>
-							<div className='form-div'>
+							<div>
 								<input
+									className='p-2 m-2 font'
 									type='password'
-									placeholder='password'
+									placeholder='Password'
 									name='password'
 									onChange={this.handleChange}
 								/>
 							</div>
-							<div className='button-div'>
-								<button className='button' type='submit'>
-									Login
-								</button>
-							</div>
+
+							<button className='m-2 font btn btn-dark' type='submit'>
+								Login
+							</button>
 						</form>
 					</section>
 				</div>

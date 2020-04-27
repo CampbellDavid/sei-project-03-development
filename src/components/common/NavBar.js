@@ -28,7 +28,7 @@ class NavBar extends React.Component {
 			<Navbar
 				bg='light'
 				expand='lg'
-				className='navbar-light fixed-top'
+				className='navbar-light fixed-top font'
 				id='mainNav'
 			>
 				<Nav className='mr-auto'>
