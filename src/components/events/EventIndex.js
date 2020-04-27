@@ -71,7 +71,7 @@ export default class EventIndex extends React.Component {
 			<div className='bg-image'>
 				<div className='bg-fade-high'>
 					<div className='body-div'>
-						<section>
+						<section style={{ overflowX: 'hidden' }}>
 							<div className='m-3'>
 								<h1 className='text-center font text-1'>
 									Find an event near you
@@ -89,7 +89,7 @@ export default class EventIndex extends React.Component {
 									<div className='p-0 row center-x'>
 										{Authorization.isAuthenticated() ? (
 											<Link to='/events/new'>
-												<button type='button' className='m-2 font btn btn-dark'>
+												<button type='button' className='m-5 font btn btn-dark'>
 													New Event
 												</button>
 											</Link>
@@ -97,7 +97,7 @@ export default class EventIndex extends React.Component {
 									</div>
 								</div>
 
-								<div className='col-md-6 d-flex flex-wrap'>
+								<div className='col-md-6 d-flex flex-wrap '>
 									<EventMapComp
 										viewport={this.state.viewport}
 										handleGeocoderViewportChange={
