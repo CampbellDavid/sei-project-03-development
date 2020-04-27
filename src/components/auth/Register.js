@@ -102,7 +102,7 @@ export default class Register extends React.Component {
 										required
 									/>
 								</div>
-								<div className='form-div'>
+								<div>
 									<input
 										className='p-2 m-2 font no-line width-80 rounded'
 										onChange={this.handleChange}
@@ -112,7 +112,7 @@ export default class Register extends React.Component {
 										required
 									/>
 								</div>
-								<div className='form-div'>
+								<div>
 									<input
 										className='p-2 m-2 font no-line width-80 rounded'
 										onChange={this.handleChange}
@@ -122,7 +122,7 @@ export default class Register extends React.Component {
 										required
 									/>
 								</div>
-								<div className='form-div'>
+								<div>
 									<input
 										className='p-2 m-2 font no-line width-80 rounded'
 										onChange={this.handleChange}
@@ -149,7 +149,7 @@ export default class Register extends React.Component {
 										name='personalityType'
 									/>
 								</div>
-								<div className='form-div'>
+								<div>
 									<textarea
 										className='p-2 m-2 font no-line width-80 rounded'
 										rows='5'
@@ -160,7 +160,7 @@ export default class Register extends React.Component {
 										name='bio'
 									/>
 								</div>
-								<div className='form-div'>
+								<div>
 									<input
 										className='p-2 m-2 font no-line width-80 rounded'
 										type='number'
@@ -169,7 +169,7 @@ export default class Register extends React.Component {
 										name='age'
 									/>
 								</div>
-								<div className='form-div'>
+								<div>
 									<select
 										className='p-2 m-2 font no-line width-80 rounded'
 										onChange={this.handleChange}
@@ -185,7 +185,7 @@ export default class Register extends React.Component {
 										<option value='non-binary'>Non Binary</option>
 									</select>
 								</div>
-								<div className='form-div'>
+								<div>
 									<input
 										className='p-2 m-2 font no-line width-80 rounded'
 										onChange={this.handleChange}
