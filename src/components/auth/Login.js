@@ -36,7 +36,7 @@ export default class Login extends React.Component {
 						<form onSubmit={this.handleSubmit} className='text-center'>
 							<div>
 								<input
-									className='p-2 m-2 font no-line rounded'
+									className='p-2 m-2 font no-line width-80 rounded'
 									placeholder='Email'
 									name='email'
 									onChange={this.handleChange}
@@ -44,7 +44,7 @@ export default class Login extends React.Component {
 							</div>
 							<div>
 								<input
-									className='p-2 m-2 font no-line rounded'
+									className='p-2 m-2 font no-line width-80 rounded'
 									type='password'
 									placeholder='Password'
 									name='password'
