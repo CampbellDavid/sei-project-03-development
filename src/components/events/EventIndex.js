@@ -79,14 +79,14 @@ export default class EventIndex extends React.Component {
 							</div>
 
 							<div className='row'>
-								<div className='col-md-6 scroll'>
-									<div className='p-0 row center-x'>
+								<div className='col-md-6 scroll pr-0'>
+									<div className='p-0 m-0 row center-x'>
 										{this.state.events.map((event) => (
 											<EventCard key={event._id} {...event} />
 										))}
 									</div>
 
-									<div className='p-0 row center-x'>
+									<div className='p-0 m-0 row center-x'>
 										{Authorization.isAuthenticated() ? (
 											<Link to='/events/new'>
 												<button type='button' className='m-5 font btn btn-dark'>
@@ -97,7 +97,7 @@ export default class EventIndex extends React.Component {
 									</div>
 								</div>
 
-								<div className='col-md-6 d-flex flex-wrap '>
+								<div className='col-md-6 d-flex flex-wrap pl-0'>
 									<EventMapComp
 										viewport={this.state.viewport}
 										handleGeocoderViewportChange={

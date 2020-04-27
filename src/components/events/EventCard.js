@@ -9,7 +9,7 @@ const EventCard = ({ pub, entryFee, quizDay, quizTime, _id }) => (
 		<Card.Body>
 			<Card.Title className='font text-light'>{entryFee}</Card.Title>
 			<Card.Text className='font text-light'>
-				{quizDay} | {quizTime}
+				{quizDay}s | {quizTime}
 			</Card.Text>
 		</Card.Body>
 		<Card.Footer>
