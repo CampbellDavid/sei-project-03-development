@@ -69,24 +69,23 @@ export default class EventIndex extends React.Component {
 		if (!this.state.postcodes) return null
 		return (
 			<div className='bg-image'>
-				<div className='bg-fade'>
+				<div className='bg-fade-high'>
 					<div className='body-div'>
 						<section>
 							<div className='mt-3'>
-								<h1 className='text-center font text-1-white'>
+								<h1 className='text-center font text-1'>
 									Find an event near you
 								</h1>
 							</div>
 
-							<div>
-								<div>
-									<div className='row'>
-										<div className='center-x'>
-											{this.state.events.map((event) => (
-												<EventCard key={event._id} {...event} />
-											))}
-										</div>
+							<div className='row'>
+								<div className='col-md-6'>
+									<div className='p-0 row center-x'>
+										{this.state.events.map((event) => (
+											<EventCard key={event._id} {...event} />
+										))}
 									</div>
+
 									{Authorization.isAuthenticated() ? (
 										<Link to='/events/new'>
 											<button type='button' className='button'>
@@ -96,7 +95,7 @@ export default class EventIndex extends React.Component {
 									) : null}
 								</div>
 
-								<div className='map-container'>
+								<div className='col-md-6'>
 									<EventMapComp
 										viewport={this.state.viewport}
 										handleGeocoderViewportChange={

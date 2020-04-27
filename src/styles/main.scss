@@ -53,6 +53,11 @@
 	min-height: 100vh;
 }
 
+.bg-fade-high {
+	background-color: #ffffff90;
+	min-height: 100vh;
+}
+
 .bg-image {
 	background-image: url(../assets/images/pub.png);
 	background-attachment: fixed;
@@ -97,7 +102,7 @@
 
 .text-1 {
 	font-size: 40px;
-	color: #000000;
+	color: #343a40;
 }
 
 .text-1-white {
@@ -107,7 +112,7 @@
 
 .text-2 {
 	font-size: 30px;
-	color: #000000;
+	color: #343a40;
 }
 
 .text-2-white {
@@ -117,7 +122,7 @@
 
 .text-3 {
 	font-size: 18px;
-	color: #000000;
+	color: #343a40;
 }
 
 .text-3-white {
