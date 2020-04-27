@@ -140,6 +140,24 @@
 	align-items: center;
 }
 
+.scroll {
+	overflow: scroll;
+	height: 100vh;
+}
+
+// Map
+
+.marker {
+	background: none;
+	border: none;
+}
+
+.marker img {
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+}
+
 // Nav
 
 // html,
