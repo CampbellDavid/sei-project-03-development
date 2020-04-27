@@ -1,13 +1,13 @@
 import React from 'react'
 
 const Home = () => (
-  <div className="home">
-    <div className="headline">
-      <h1>Inquizitours</h1>
-      <p>Find a pub quiz and join a team!</p>
-    </div>
-    
-  </div>
+	<div className='home'>
+		<div className='bg-fade'>
+			<div className='logo-position'>
+				<img src='../../assets/logo/logo.png' alt='logo' width='300px' />
+			</div>
+		</div>
+	</div>
 )
 
 export default Home

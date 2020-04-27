@@ -3,415 +3,419 @@ $pale: rgb(245, 238, 226);
 // Common
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 h1 {
-  font-family: 'Kranky', cursive;
-  font-size: 44px;
-  text-align: center;
-  color: $pale;
-  padding: 10px;
-  margin: 10px;
+	font-family: 'Kranky', cursive;
+	font-size: 44px;
+	text-align: center;
+	color: $pale;
+	padding: 10px;
+	margin: 10px;
 }
 
 .unknown-route {
-  color: black;
+	color: black;
 }
 
 body {
-  background: rgb(0,36,27);
-  background: linear-gradient(180deg, rgba(0,36,27,1) 11%, rgba(9,121,108,1) 65%, rgba(0,255,254,1) 100%) fixed;
-  min-height: 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
+	background: rgb(0, 36, 27);
+	background: linear-gradient(
+			180deg,
+			rgba(0, 36, 27, 1) 11%,
+			rgba(9, 121, 108, 1) 65%,
+			rgba(0, 255, 254, 1) 100%
+		)
+		fixed;
+	min-height: 100%;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 li {
-  list-style:none;
+	list-style: none;
 }
-
 
 // Nav
 
-html, body, div, p, ul, li {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
+html,
+body,
+div,
+p,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
 }
 
 .navbar {
-  background: #000;
-  height: 60px;
+	background: #000;
+	height: 60px;
 }
 
 .nav-item {
-  display: inline-block;
-  list-style: none;
-  height: 60px;
-  line-height: 60px; 
-  padding: 0 40px;
+	display: inline-block;
+	list-style: none;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 40px;
 }
 
 .nav-item:hover {
-  background: darkcyan;
-  transition: background .3s;
+	background: darkcyan;
+	transition: background 0.3s;
 }
 
 .nav-item {
-  color: #fff;
-  text-decoration: none;
+	color: #fff;
+	text-decoration: none;
 }
 
 // Home
 
-.home {
-  background-image: url('https://www.bunchofgrapesborough.co.uk/youngs/uploads/sites/156/2018/09/bunchofgrapes-104-2.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  .headline {
-    background-color: rgba(212, 218, 212, 0.5);
-    h1 {
-      font-size: 10vw;
-      color: white;
-    }
-    p {
-      font-size: 4vw;
-      color: white;
-      margin: 20;
-    }
-  }
+.bg-fade {
+	background-image: linear-gradient(to right, #ffffff65, #0c4c8a65);
+	min-height: 100vh;
 }
 
+.home {
+	background-image: url(../assets/images/pub.png);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+}
+
+.logo-position {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
 
 // Map
 
 .marker {
-  background: none;
-  border: none;
+	background: none;
+	border: none;
 }
 
 .marker img {
-  width: 60px;
-  height: 60px;
-  border-radius:100%;
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
 }
 
 .index {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .map-container {
-  display: flex;
-  width: 65vw;
-  flex-wrap: wrap;
+	display: flex;
+	width: 65vw;
+	flex-wrap: wrap;
 }
-
 
 // Pub & Event Cards
 
 .card-container {
-  display: flex;
-  flex-direction: column;
-  width: 35vw;
-  overflow: scroll;
-  height:100vh;
-  a {
-    color: black;
-    text-decoration: none;
-  }
+	display: flex;
+	flex-direction: column;
+	width: 35vw;
+	overflow: scroll;
+	height: 100vh;
+	a {
+		color: black;
+		text-decoration: none;
+	}
 }
 
 .card {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 20px;
-  border: 1px solid black;
-  background-color: $pale;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 20px;
+	border: 1px solid black;
+	background-color: $pale;
 }
 
 .colour-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .image img {
-  width: 50px;
-  height: 50px;
-  border-radius:100%;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
 }
 
 h3 {
-  margin: 5px;
+	margin: 5px;
 }
 
 .card-info {
-  h3 {
-    margin: 20px;
-  }
+	h3 {
+		margin: 20px;
+	}
 }
 
 p {
-  margin: 5px;
+	margin: 5px;
 }
 
 // Pub Show
 
 .pub-show {
-  display: flex;
-  margin: 50px;
-  flex-wrap: wrap;
-  justify-content: center;
+	display: flex;
+	margin: 50px;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .pub-info {
-  border: medium solid black;
-  width: 60%;
-  margin: 10px;
-  background-color: $pale;
-  h1 {
-    color: black;
-  }
-  p {
-    padding: 10px;
-  }
-  a {
-    padding: 10px;
-    margin: 10px;
-  }
+	border: medium solid black;
+	width: 60%;
+	margin: 10px;
+	background-color: $pale;
+	h1 {
+		color: black;
+	}
+	p {
+		padding: 10px;
+	}
+	a {
+		padding: 10px;
+		margin: 10px;
+	}
 }
 
 .pub-image {
-  display: flex;
-  justify-content: center;
-  background-image: contain;
+	display: flex;
+	justify-content: center;
+	background-image: contain;
 }
 
 .pub-image1 {
-  max-width:80%;
-  max-height:100%;
+	max-width: 80%;
+	max-height: 100%;
 }
 
 .button-list {
-  display: flex;
+	display: flex;
 }
 
 .sidebar {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .address {
-  border: medium solid black;
-  height: 50%;
-  margin: 10px;
-  background-color: $pale;
+	border: medium solid black;
+	height: 50%;
+	margin: 10px;
+	background-color: $pale;
 }
 
 .quiz-info {
-  border: medium solid black;
-  height: 50%;
-  margin: 10px;
-  background-color: $pale;
+	border: medium solid black;
+	height: 50%;
+	margin: 10px;
+	background-color: $pale;
 }
 
 .reviews {
-  width: 73vw;
-  margin: 50px;
-  li {
-    display: flex;
-    border: medium  solid black;
-    background-color: $pale;
-    color: black;
-    margin: 7px;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 20px;
-  }
+	width: 73vw;
+	margin: 50px;
+	li {
+		display: flex;
+		border: medium solid black;
+		background-color: $pale;
+		color: black;
+		margin: 7px;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 20px;
+	}
 }
 
 .review-form {
-  display: flex;
-  flex-direction: column;
-  background-color: $pale;
-  border-bottom: 7px solid black;
-  border-top: 1px solid white;
-  width: 73vw;
-  margin: 0px 0px 50px;
-  align-items: center;
-  padding-top: 30px;
+	display: flex;
+	flex-direction: column;
+	background-color: $pale;
+	border-bottom: 7px solid black;
+	border-top: 1px solid white;
+	width: 73vw;
+	margin: 0px 0px 50px;
+	align-items: center;
+	padding-top: 30px;
 
-.review-textarea {
-  width: 600px;
-  height: 100px;
-  text-align: center;
- }
-
+	.review-textarea {
+		width: 600px;
+		height: 100px;
+		text-align: center;
+	}
 }
 
 ul {
-  list-style: none;
-  color: white;
+	list-style: none;
+	color: white;
 }
 
-.event-show{
-  .join{
-    color: white;
-    text-align: center;
-  }
+.event-show {
+	.join {
+		color: white;
+		text-align: center;
+	}
 }
-
 
 // Profiles
 
-.profile-container{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  height: 400px;
-  .profile-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: medium solid black;
-    width: auto;
-    height: 100%;
-    margin: 10px;
-    background-color: $pale;
-    margin: 30px;
-    h2 {
-      font-size: 3em;
-    }
-    .profile-bio{
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      justify-content: space-evenly;
-      p {
-        font-size: 1.5em;
-        span{
-          font-weight: 600;
-        }
-      }
-      .profile-image {
-        width: 250px;
-        height: 150px;
-      }
-    }
-  }
+.profile-container {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	height: 400px;
+	.profile-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: medium solid black;
+		width: auto;
+		height: 100%;
+		margin: 10px;
+		background-color: $pale;
+		margin: 30px;
+		h2 {
+			font-size: 3em;
+		}
+		.profile-bio {
+			display: flex;
+			align-items: center;
+			padding: 20px;
+			justify-content: space-evenly;
+			p {
+				font-size: 1.5em;
+				span {
+					font-weight: 600;
+				}
+			}
+			.profile-image {
+				width: 250px;
+				height: 150px;
+			}
+		}
+	}
 }
 
 // Forms
 
 form {
-  display: flex;
-  flex-direction: column;
-  background-color: $pale;
-  border-bottom: 7px solid black;
-  border-top: 1px solid white;
-  width: 73vw;
-  margin: 0px 0px 50px;
-  p {
-    text-align: center;
-    font-size: 1em;
-    font-family: 'Roboto Condensed', sans-serif;
-    padding: 1em;
-    margin: 0px;
-  }
+	display: flex;
+	flex-direction: column;
+	background-color: $pale;
+	border-bottom: 7px solid black;
+	border-top: 1px solid white;
+	width: 73vw;
+	margin: 0px 0px 50px;
+	p {
+		text-align: center;
+		font-size: 1em;
+		font-family: 'Roboto Condensed', sans-serif;
+		padding: 1em;
+		margin: 0px;
+	}
 }
 
 .form-div {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  padding: .5em;
-  border-radius: 10px;
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	padding: 0.5em;
+	border-radius: 10px;
 }
 
 .button-div {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 10px;
-  margin: 20px;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 10px;
+	margin: 20px;
 }
 
 .button {
-  border-top: 1px solid darkcyan;
-  background: darkcyan;
-  padding: 13px 26px;
-  border-radius: 12px;
-  box-shadow: rgba(0,0,0,1) 0 1px 0;
-  text-shadow: rgba(0,0,0,.4) 0 1px 0;
-  color: white;
-  font-size: 17px;
-  text-decoration: none;
-  vertical-align: middle;
-  font-family: 'Roboto Condensed', sans-serif;
-  margin: 20px;
-  }
+	border-top: 1px solid darkcyan;
+	background: darkcyan;
+	padding: 13px 26px;
+	border-radius: 12px;
+	box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+	text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+	color: white;
+	font-size: 17px;
+	text-decoration: none;
+	vertical-align: middle;
+	font-family: 'Roboto Condensed', sans-serif;
+	margin: 20px;
+}
 
 .button:hover {
-  border-top-color: orangered;
-  background: orangered;
-  color: white;
-  }
+	border-top-color: orangered;
+	background: orangered;
+	color: white;
+}
 
 .form-div > input {
-  flex: 2;
-  background-color: whitesmoke;
-  text-align: center;
-  font-size: 14px;
+	flex: 2;
+	background-color: whitesmoke;
+	text-align: center;
+	font-size: 14px;
 	font-family: sans-serif;
 	font-weight: 700;
 	color: #444;
-  padding: 1.5em 4em 1.5em 0;
-  margin: 0.5em 3em;
+	padding: 1.5em 4em 1.5em 0;
+	margin: 0.5em 3em;
 }
 
 .form-div > textarea {
-  flex: 2;
-  background-color: whitesmoke;
-  text-align: center;
-  font-size: 14px;
+	flex: 2;
+	background-color: whitesmoke;
+	text-align: center;
+	font-size: 14px;
 	font-family: sans-serif;
 	font-weight: 700;
 	color: #444;
-  padding: 1.5em 4em 1.5em 0;
-  margin: 0.5em 3em;
+	padding: 1.5em 4em 1.5em 0;
+	margin: 0.5em 3em;
 }
 
 .form-div > select {
-  flex: 2;
+	flex: 2;
 	font-size: 14px;
 	font-family: sans-serif;
 	font-weight: 700;
 	color: #444;
 	line-height: 1.3;
-	padding: .6em 1.4em .5em .8em;
-  margin: 0.5em 3em;
+	padding: 0.6em 1.4em 0.5em 0.8em;
+	margin: 0.5em 3em;
 	border: 1px solid #aaa;
-	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
@@ -419,21 +423,20 @@ form {
 }
 
 .form-div > option {
-  padding: 1.5em 4em 1.5em 0;
-  margin: 0.5em 3em;
+	padding: 1.5em 4em 1.5em 0;
+	margin: 0.5em 3em;
 }
-
 
 // Footer
 
-.footer{
-  background-color: black;
-  height: 60px;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  line-height: 50px;
-  color: #aaa;
-  text-align: center;
-  width: 100%;
+.footer {
+	background-color: black;
+	height: 60px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	line-height: 50px;
+	color: #aaa;
+	text-align: center;
+	width: 100%;
 }
