@@ -127,17 +127,17 @@ export default class Register extends React.Component {
 										className='p-2 m-2 font no-line width-80 rounded'
 										onChange={this.handleChange}
 										type='password'
-										placeholder='Confirm Password'
+										placeholder='Confirm password'
 										name='passwordConfirmation'
 										required
 									/>
 								</div>
-								<p className='font mt-3'>Additional Information (optional)</p>
+								<p className='font mt-3'>Additional information (optional)</p>
 								<div>
 									<input
 										className='p-2 m-2 font no-line width-80 rounded'
 										onChange={this.handleChange}
-										placeholder='Add Drinks'
+										placeholder='Add drinks'
 										name='favouriteDrinks'
 									/>
 								</div>
@@ -145,7 +145,7 @@ export default class Register extends React.Component {
 									<input
 										className='p-2 m-2 font no-line width-80 rounded'
 										onChange={this.handleChange}
-										placeholder='Personality Type'
+										placeholder='Personality type'
 										name='personalityType'
 									/>
 								</div>
@@ -172,6 +172,7 @@ export default class Register extends React.Component {
 								<div>
 									<select
 										className='p-2 m-2 font no-line width-80 rounded'
+										style={{ height: '40px' }}
 										onChange={this.handleChange}
 										placeholder='Gender'
 										name='gender'
@@ -182,14 +183,14 @@ export default class Register extends React.Component {
 										</option>
 										<option value='male'>Male</option>
 										<option value='female'>Female</option>
-										<option value='non-binary'>Non Binary</option>
+										<option value='non-binary'>Non-binary</option>
 									</select>
 								</div>
 								<div>
 									<input
 										className='p-2 m-2 font no-line width-80 rounded'
 										onChange={this.handleChange}
-										placeholder='Quiz Strengths'
+										placeholder='Quiz strengths'
 										name='quizStrengths'
 									/>
 								</div>

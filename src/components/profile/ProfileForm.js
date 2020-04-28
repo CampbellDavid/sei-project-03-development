@@ -20,7 +20,7 @@ const ProfileForm = ({ user, handleChange, handleSubmit }) => {
 					<input
 						className='p-2 m-2 font no-line width-80 rounded'
 						onChange={handleChange}
-						placeholder='Favourite Drinks'
+						placeholder='Favourite drinks'
 						name='favouriteDrinks'
 						value={user.favouriteDrinks}
 					/>
@@ -29,7 +29,7 @@ const ProfileForm = ({ user, handleChange, handleSubmit }) => {
 					<input
 						className='p-2 m-2 font no-line width-80 rounded'
 						onChange={handleChange}
-						placeholder='Personality Type'
+						placeholder='Personality type'
 						name='personalityType'
 						value={user.personalityType}
 					/>
@@ -61,6 +61,7 @@ const ProfileForm = ({ user, handleChange, handleSubmit }) => {
 				<div>
 					<select
 						className='p-2 m-2 font no-line width-80 rounded'
+						style={{ height: '40px' }}
 						onChange={handleChange}
 						placeholder='Gender'
 						name='gender'
@@ -71,7 +72,7 @@ const ProfileForm = ({ user, handleChange, handleSubmit }) => {
 						</option>
 						<option value='male'>Male</option>
 						<option value='female'>Female</option>
-						<option value='non-binary'>Non Binary</option>
+						<option value='non-binary'>Non-binary</option>
 					</select>
 				</div>
 
@@ -79,7 +80,7 @@ const ProfileForm = ({ user, handleChange, handleSubmit }) => {
 					<input
 						className='p-2 m-2 font no-line width-80 rounded'
 						onChange={handleChange}
-						placeholder='Quiz Strengths'
+						placeholder='Quiz strengths'
 						name='quizStrengths'
 						value={user.quizStrengths}
 					/>

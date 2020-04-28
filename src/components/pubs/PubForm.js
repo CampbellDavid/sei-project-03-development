@@ -11,7 +11,7 @@ const PubForm = ({ data, handleChange, handleSubmit }) => {
 					<input
 						className='p-2 m-2 font no-line width-80 rounded'
 						onChange={handleChange}
-						placeholder='Pub Name'
+						placeholder='Pub name'
 						name='name'
 						value={data.name}
 						required
@@ -21,7 +21,7 @@ const PubForm = ({ data, handleChange, handleSubmit }) => {
 					<input
 						className='p-2 m-2 font no-line width-80 rounded'
 						onChange={handleChange}
-						placeholder='Street Address'
+						placeholder='Street address'
 						name='streetName'
 						value={data.streetName}
 						required
@@ -51,7 +51,7 @@ const PubForm = ({ data, handleChange, handleSubmit }) => {
 					<input
 						className='p-2 m-2 font no-line width-80 rounded'
 						onChange={handleChange}
-						placeholder='Phone Number'
+						placeholder='Phone number'
 						name='phone'
 						value={data.phone}
 					/>
@@ -69,7 +69,7 @@ const PubForm = ({ data, handleChange, handleSubmit }) => {
 					<input
 						className='p-2 m-2 font no-line width-80 rounded'
 						onChange={handleChange}
-						placeholder='Pub Description'
+						placeholder='Pub description'
 						name='description'
 						value={data.description}
 					/>
@@ -79,7 +79,7 @@ const PubForm = ({ data, handleChange, handleSubmit }) => {
 						className='p-2 m-2 font no-line width-80 rounded'
 						type='number'
 						onChange={handleChange}
-						placeholder='Max. Team Size'
+						placeholder='Maximum team size'
 						name='maxTeamSize'
 						value={data.maxTeamSize}
 						required
@@ -89,7 +89,7 @@ const PubForm = ({ data, handleChange, handleSubmit }) => {
 					<input
 						className='p-2 m-2 font no-line width-80 rounded'
 						onChange={handleChange}
-						placeholder='Quiz Day'
+						placeholder='Quiz day'
 						name='quizDay'
 						value={data.quizDay}
 						required
@@ -100,7 +100,7 @@ const PubForm = ({ data, handleChange, handleSubmit }) => {
 						className='p-2 m-2 font no-line width-80 rounded'
 						type='time'
 						onChange={handleChange}
-						placeholder='Quiz Time'
+						placeholder='Quiz time'
 						name='quizTime'
 						value={data.quizTime}
 						required
@@ -110,19 +110,14 @@ const PubForm = ({ data, handleChange, handleSubmit }) => {
 					<input
 						className='p-2 m-2 font no-line width-80 rounded'
 						onChange={handleChange}
-						placeholder='Average Pint Cost'
+						placeholder='Average pint cost'
 						name='averagePintCost'
 						value={data.averagePintCost}
 						required
 					/>
 				</div>
 				<div>
-					<ImageUpload
-						labelText='Upload Image'
-						handleChange={handleChange}
-						fieldName='image'
-						required
-					/>
+					<ImageUpload handleChange={handleChange} fieldName='image' required />
 				</div>
 
 				<button className='m-2 font btn btn-dark' type='submit'>
