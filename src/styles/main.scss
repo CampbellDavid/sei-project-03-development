@@ -19,6 +19,15 @@
 	min-height: 100vh;
 }
 
+.review-item {
+	border-top: 2px solid #343a40;
+	word-wrap: break-word;
+}
+
+.review-list {
+	list-style-type: none;
+}
+
 .bg-fade-high {
 	background-color: #ffffffdd;
 	min-height: 100vh;

@@ -11,6 +11,15 @@ const ProfileForm = ({ user, handleChange, handleSubmit }) => {
 					<input
 						className='p-2 m-2 font no-line width-80 rounded'
 						onChange={handleChange}
+						placeholder='Username'
+						name='username'
+						value={user.username}
+					/>
+				</div>
+				<div>
+					<input
+						className='p-2 m-2 font no-line width-80 rounded'
+						onChange={handleChange}
 						placeholder='Email'
 						name='email'
 						value={user.email}
@@ -20,11 +29,31 @@ const ProfileForm = ({ user, handleChange, handleSubmit }) => {
 					<input
 						className='p-2 m-2 font no-line width-80 rounded'
 						onChange={handleChange}
+						type='password'
+						placeholder='Password'
+						name='password'
+					/>
+				</div>
+				<div>
+					<input
+						className='p-2 m-2 font no-line width-80 rounded'
+						onChange={handleChange}
+						type='password'
+						placeholder='Confirm password'
+						name='passwordConfirmation'
+					/>
+				</div>
+
+				<div>
+					<input
+						className='p-2 m-2 font no-line width-80 rounded'
+						onChange={handleChange}
 						placeholder='Favourite drinks'
 						name='favouriteDrinks'
 						value={user.favouriteDrinks}
 					/>
 				</div>
+
 				<div>
 					<input
 						className='p-2 m-2 font no-line width-80 rounded'

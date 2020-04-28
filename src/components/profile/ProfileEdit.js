@@ -6,15 +6,17 @@ import ProfileForm from './ProfileForm'
 class ProfileEdit extends React.Component {
 	state = {
 		user: {
+			username: '',
 			email: '',
+			password: '',
+			passwordConfirmation: '',
 			favouriteDrinks: '',
 			personalityType: '',
 			bio: '',
 			age: 0,
 			gender: '',
 			quizStrengths: '',
-			username: '',
-			_id: '',
+			profileImage: '',
 		},
 		errors: {},
 	}

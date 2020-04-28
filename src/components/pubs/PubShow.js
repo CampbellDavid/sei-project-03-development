@@ -123,6 +123,27 @@ export default class PubShow extends React.Component {
 											</div>
 										</form>
 									)}
+
+									<div className='mt-3'>
+										<ul className='review-list'>
+											{pub.reviews.length < 1
+												? null
+												: pub.reviews.map((review) => (
+														<li className='review-item mb-5' key={review._id}>
+															{review.text}
+
+															<button
+																onClick={this.handleDeleteReview}
+																name={review._id}
+																type='submit'
+																className='float-right mt-2 font btn btn-danger'
+															>
+																Delete
+															</button>
+														</li>
+												  ))}
+										</ul>
+									</div>
 								</div>
 
 								<div className='col-md-6 p-5'>
@@ -192,26 +213,6 @@ export default class PubShow extends React.Component {
 											Average cost of a pint: {pub.averagePintCost}
 										</p>
 									</div>
-								</div>
-								<div className='reviews'>
-									<ul>
-										{pub.reviews.length < 1
-											? null
-											: pub.reviews.map((review) => (
-													<li key={review._id}>
-														{review.text}
-
-														<button
-															onClick={this.handleDeleteReview}
-															name={review._id}
-															type='submit'
-															className='mt-2 font btn btn-danger'
-														>
-															Delete
-														</button>
-													</li>
-											  ))}
-									</ul>
 								</div>
 							</div>
 						</section>
