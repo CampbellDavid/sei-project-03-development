@@ -88,20 +88,26 @@ export default class PubShow extends React.Component {
 							<h1 className='text-center font text-1-white'>{pub.name}</h1>
 						</div>
 
-						<div className='row'>
+						<div className='row font text-3'>
 							<div className='col-md-6'>
-								<img src={pub.image} alt={pub.name} />
+								<img
+									src={pub.image}
+									alt={pub.name}
+									className='img-responsive rounded mb-3 w-100'
+								/>
 							</div>
 
 							<div className='col-md-6'>
 								<StarRating />
 								<p>{pub.description}</p>
-								<a href={pub.website}>Visit Pub Website</a>
+								<a href={pub.website} target='_blank'>
+									Visit Pub Website
+								</a>
 
 								{Authorization.isAuthenticated() ? (
 									<div>
 										<Link to='/events/new'>
-											<button className='button' type='button'>
+											<button className='m-5 font btn btn-dark' type='button'>
 												New Event
 											</button>
 										</Link>
@@ -109,36 +115,41 @@ export default class PubShow extends React.Component {
 										{this.isPubOwner() && (
 											<div>
 												<Link to={`/pubs/${pubId}/edit`}>
-													<button className='button' type='button'>
+													<button
+														className='m-5 font btn btn-dark'
+														type='button'
+													>
 														Edit Pub
 													</button>
 												</Link>
-												<button className='button' onClick={this.handleDelete}>
+												<button
+													className='m-5 font btn btn-danger'
+													onClick={this.handleDelete}
+												>
 													Delete Pub
 												</button>
 											</div>
 										)}
 									</div>
 								) : null}
-							</div>
 
-							<div className='sidebar'>
-								<div className='address'>
-									<h2>Address Info:</h2>
-									<p>{pub.city}</p>
-									<p>{pub.postcode}</p>
-									<p>{pub.phone}</p>
+								<div className='sidebar'>
+									<div className='address'>
+										<h2>Address</h2>
+										<p>{pub.city}</p>
+										<p>{pub.postcode}</p>
+										<p>{pub.phone}</p>
+									</div>
+
+									<div className='quiz-info'>
+										<h2>Quiz information</h2>
+										<p>Maximum team size: {pub.maxTeamSize}</p>
+										<p>Day of quiz: {pub.quizDay}</p>
+										<p>Time of quiz: {pub.quizTime}</p>
+										<p>Average cost of a pint: {pub.averagePintCost}</p>
+									</div>
 								</div>
-
-								<div className='quiz-info'>
-									<h2>Quiz Info:</h2>
-									<p>Maximum Team size: {pub.maxTeamSize}</p>
-									<p>Day of Quiz: {pub.quizDay}</p>
-									<p>Time of Quiz: {pub.quizTime}</p>
-									<p>Average Cost of a Pint: {pub.averagePintCost}</p>
-								</div>
 							</div>
-
 							<div className='reviews'>
 								<ul>
 									{pub.reviews.length < 1
@@ -151,7 +162,7 @@ export default class PubShow extends React.Component {
 														onClick={this.handleDeleteReview}
 														name={review._id}
 														type='submit'
-														className='button'
+														className='m-5 font btn btn-danger'
 													>
 														Delete
 													</button>
@@ -175,7 +186,7 @@ export default class PubShow extends React.Component {
 									</div>
 
 									<div>
-										<button className='button' type='submit'>
+										<button className='m-5 font btn btn-dark' type='submit'>
 											Add
 										</button>
 									</div>
