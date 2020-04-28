@@ -59,7 +59,7 @@ class TeamCard extends React.Component {
 		return (
 			<div className='team-card p-2 m-2 rounded'>
 				<div>
-					<h2 className='font text-2'>{team.teamName}</h2>
+					<h2 className='text-center font text-2'>{team.teamName}</h2>
 				</div>
 				<p className='font text-3'>Captain: {team.captain.username}</p>
 				<p className='font text-3'>
