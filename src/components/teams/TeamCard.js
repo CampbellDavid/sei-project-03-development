@@ -75,11 +75,11 @@ class TeamCard extends React.Component {
 					</h3>
 
 					{Authorization.isAuthenticated() ? (
-						<div className='buttons'>
+						<div className='text-center'>
 							{team.members.some((member) => member._id === userId) ? (
 								<button
 									type='button'
-									className='button'
+									className='m-5 font btn btn-dark'
 									onClick={this.handleClick}
 								>
 									Leave Team
@@ -87,7 +87,7 @@ class TeamCard extends React.Component {
 							) : (
 								<button
 									type='button'
-									className='button'
+									className='m-5 font btn btn-dark'
 									onClick={this.handleClick}
 								>
 									Join Team
