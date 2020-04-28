@@ -128,21 +128,29 @@ export default class PubShow extends React.Component {
 								<div className='col-md-6 p-5'>
 									<StarRating />
 									<p className='text-justify'>{pub.description}</p>
-									<a href={pub.website} target='_blank'>
-										Visit Pub Website
-									</a>
+
+									<Link to={pub.website}>
+										<button
+											className='mt-2 mr-1 font btn btn-dark'
+											type='button'
+										>
+											Visit Pub Website
+										</button>
+									</Link>
+
+									{Authorization.isAuthenticated() ? (
+										<Link to='/events/new'>
+											<button
+												className='mt-2 ml-1 font btn btn-dark'
+												type='button'
+											>
+												New Event
+											</button>
+										</Link>
+									) : null}
 
 									{Authorization.isAuthenticated() ? (
 										<div>
-											<Link to='/events/new'>
-												<button
-													className='mt-2 font btn btn-dark'
-													type='button'
-												>
-													New Event
-												</button>
-											</Link>
-
 											{this.isPubOwner() && (
 												<div>
 													<Link to={`/pubs/${pubId}/edit`}>
