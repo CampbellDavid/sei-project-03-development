@@ -113,7 +113,7 @@ export default class PubShow extends React.Component {
 										</div>
 
 										<div>
-											<button className='m-5 font btn btn-dark' type='submit'>
+											<button className='mt-2 font btn btn-dark' type='submit'>
 												Add
 											</button>
 										</div>
