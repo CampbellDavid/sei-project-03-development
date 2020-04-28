@@ -37,14 +37,14 @@ export default class EventShow extends React.Component {
 		const eventId = this.props.match.params.id
 		return (
 			<div className='bg-image'>
-				<div className='bg-fade-high'>
+				<div className='bg-fade'>
 					<div className='body-div'>
 						<div className='event-show'>
 							<div className='m-3'>
-								<h1 className='text-center font text-1'>
+								<h1 className='text-center font text-1-white'>
 									{this.state.event.pub}
 								</h1>
-								<h2 className='text-center font text-2'>
+								<h2 className='text-center font text-2-white'>
 									Join a team at this event
 								</h2>
 							</div>
