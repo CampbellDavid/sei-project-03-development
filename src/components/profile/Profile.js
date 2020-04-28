@@ -52,23 +52,23 @@ class Profile extends React.Component {
 							</h1>
 						</div>
 
-						<div className=''>
-							<img
-								className='img-thumbnail rounded-circle'
-								style={{ width: '300px', height: '300px' }}
-								src={profileImage}
-							/>
-							<p> {bio}</p>
-							<div className='third-column'>
+						<div className='row text-center'>
+							<div className='col-md-6'>
+								<img className='profile-img' src={profileImage} />
+							</div>
+							<div className='col-md-6 text-left font text-3'>
+								<p className='text-justify'>{bio}</p>
 								<p>
-									<span> Favourite Drinks:</span> {favouriteDrinks}
+									<span>Favourite Drinks: </span>
+									{favouriteDrinks}
 								</p>
 								<p>
 									<span>Quiz Strengths: </span>
 									{quizStrengths}
 								</p>
 								<p>
-									<span>Peronality Type:</span> {personalityType}
+									<span>Peronality Type: </span>
+									{personalityType}
 								</p>
 								<p>
 									<span>{email}</span>
