@@ -65,13 +65,13 @@ const ProfileForm = ({ user, handleChange, handleSubmit }) => {
 						onChange={handleChange}
 						placeholder='Gender'
 						name='gender'
-						value={user.gender}
+						defaultValue='choose-gender'
 					>
 						<option value='choose-gender' disabled>
 							Gender
 						</option>
-						<option value='male'>Male</option>
 						<option value='female'>Female</option>
+						<option value='male'>Male</option>
 						<option value='non-binary'>Non-binary</option>
 					</select>
 				</div>
