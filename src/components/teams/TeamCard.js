@@ -57,51 +57,49 @@ class TeamCard extends React.Component {
 		const { team } = this.state
 
 		return (
-			<>
-				<div className='card'>
-					<div className='card-info'>
-						<h2>{team.teamName}</h2>
-					</div>
-					<h3>Captain: {team.captain.username}</h3>
-					<h3>
-						Members:{' '}
-						{team.members.map((member, i) => {
-							return (
-								<li key={i}>
-									<Link to={`/profiles/${member._id}`}>{member.username}</Link>
-								</li>
-							)
-						})}
-					</h3>
-
-					{Authorization.isAuthenticated() ? (
-						<div className='text-center'>
-							{team.members.some((member) => member._id === userId) ? (
-								<button
-									type='button'
-									className='m-5 font btn btn-dark'
-									onClick={this.handleClick}
-								>
-									Leave Team
-								</button>
-							) : (
-								<button
-									type='button'
-									className='m-5 font btn btn-dark'
-									onClick={this.handleClick}
-								>
-									Join Team
-								</button>
-							)}
-							{this.isOwner() && (
-								<button type='button' className='button'>
-									Edit Team
-								</button>
-							)}
-						</div>
-					) : null}
+			<div className='team-card p-2 m-2 rounded'>
+				<div>
+					<h2 className='font text-2'>{team.teamName}</h2>
 				</div>
-			</>
+				<p className='font text-3'>Captain: {team.captain.username}</p>
+				<p className='font text-3'>
+					Members:{' '}
+					{team.members.map((member, i) => {
+						return (
+							<li key={i}>
+								<Link to={`/profiles/${member._id}`}>{member.username}</Link>
+							</li>
+						)
+					})}
+				</p>
+
+				{Authorization.isAuthenticated() ? (
+					<div className='text-center'>
+						{team.members.some((member) => member._id === userId) ? (
+							<button
+								type='button'
+								className='m-5 font btn btn-dark'
+								onClick={this.handleClick}
+							>
+								Leave Team
+							</button>
+						) : (
+							<button
+								type='button'
+								className='m-5 font btn btn-dark'
+								onClick={this.handleClick}
+							>
+								Join Team
+							</button>
+						)}
+						{this.isOwner() && (
+							<button type='button' className='m-5 font btn btn-dark'>
+								Edit Team
+							</button>
+						)}
+					</div>
+				) : null}
+			</div>
 		)
 	}
 }
