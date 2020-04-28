@@ -74,15 +74,15 @@ class Profile extends React.Component {
 									<span>{email}</span>
 								</p>
 							</div>
-							<div className='text-center'>
-								{this.isOwner() && (
-									<Link to={`/profiles/${userId}/edit`}>
-										<button type='button' className='m-2 font btn btn-dark'>
-											Edit Profile
-										</button>
-									</Link>
-								)}
-							</div>
+						</div>
+						<div className='text-center p-4'>
+							{this.isOwner() && (
+								<Link to={`/profiles/${userId}/edit`}>
+									<button type='button' className='m-2 font btn btn-dark'>
+										Edit Profile
+									</button>
+								</Link>
+							)}
 						</div>
 					</div>
 				</div>
