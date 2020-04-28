@@ -86,7 +86,7 @@ export default class PubShow extends React.Component {
 					<div className='body-div'>
 						<section style={{ overflowX: 'hidden' }}>
 							<div className='m-3'>
-								<h1 className='text-center font text-1-white'>{pub.name}</h1>
+								<h1 className='text-center font text-1'>{pub.name}</h1>
 							</div>
 
 							<div className='row font text-3'>
@@ -141,7 +141,7 @@ export default class PubShow extends React.Component {
 									{Authorization.isAuthenticated() ? (
 										<Link to='/events/new'>
 											<button
-												className='mt-2 ml-1 font btn btn-dark'
+												className='mt-2 ml-1 mr-1 font btn btn-dark'
 												type='button'
 											>
 												New Event
@@ -155,14 +155,14 @@ export default class PubShow extends React.Component {
 												<div>
 													<Link to={`/pubs/${pubId}/edit`}>
 														<button
-															className='mt-2 font btn btn-dark'
+															className='mt-2 ml-1 font btn btn-dark'
 															type='button'
 														>
 															Edit Pub
 														</button>
 													</Link>
 													<button
-														className='mt-2 font btn btn-danger'
+														className='mt-2 ml-1 font btn btn-danger'
 														onClick={this.handleDelete}
 													>
 														Delete Pub
@@ -173,18 +173,24 @@ export default class PubShow extends React.Component {
 									) : null}
 
 									<div className='m-2'>
-										<h2>Address</h2>
-										<p>{pub.city}</p>
-										<p>{pub.postcode}</p>
-										<p>{pub.phone}</p>
+										<h2 className='text-2'>Address</h2>
+										<p className='m-0 p-0'>{pub.name}</p>
+										<p className='m-0 p-0'>{pub.streetName}</p>
+										<p className='m-0 p-0'>{pub.city}</p>
+										<p className='m-0 p-0'>{pub.postcode}</p>
+										<p className='m-0 p-0'>{pub.phone}</p>
 									</div>
 
 									<div className='m-2'>
-										<h2>Quiz information</h2>
-										<p>Maximum team size: {pub.maxTeamSize}</p>
-										<p>Day of quiz: {pub.quizDay}</p>
-										<p>Time of quiz: {pub.quizTime}</p>
-										<p>Average cost of a pint: {pub.averagePintCost}</p>
+										<h2 className='text-2'>Additional information</h2>
+										<p className='p-0 m-0'>
+											Maximum team size: {pub.maxTeamSize}
+										</p>
+										<p className='p-0 m-0'>Day of quiz: {pub.quizDay}</p>
+										<p className='p-0 m-0'>Time of quiz: {pub.quizTime}</p>
+										<p className='p-0 m-0'>
+											Average cost of a pint: {pub.averagePintCost}
+										</p>
 									</div>
 								</div>
 								<div className='reviews'>

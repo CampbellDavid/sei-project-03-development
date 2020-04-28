@@ -9,7 +9,7 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<>
+			<div>
 				<BeautyStars
 					value={this.state.starRating}
 					onChange={(starRating) => {
@@ -28,7 +28,7 @@ export default class App extends Component {
 								})
 						  )}
 				</p>
-			</>
+			</div>
 		)
 	}
 }
