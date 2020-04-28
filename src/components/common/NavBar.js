@@ -76,7 +76,7 @@ class NavBar extends React.Component {
 								className='nav-link nav-link-format text-dark'
 								href={`/profiles/${Authorization.getPayload().sub}/edit`}
 							>
-								My Account
+								Account Settings
 							</Nav.Link>
 						)}
 

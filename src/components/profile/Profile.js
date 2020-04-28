@@ -51,9 +51,13 @@ class Profile extends React.Component {
 								's profile
 							</h1>
 						</div>
-						<br />
-						<div className='profile-bio'>
-							<img className='profile-image' src={profileImage} />
+
+						<div className=''>
+							<img
+								className='img-thumbnail rounded-circle'
+								style={{ width: '300px', height: '300px' }}
+								src={profileImage}
+							/>
 							<p> {bio}</p>
 							<div className='third-column'>
 								<p>
