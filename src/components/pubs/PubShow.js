@@ -129,14 +129,14 @@ export default class PubShow extends React.Component {
 									<StarRating />
 									<p className='text-justify'>{pub.description}</p>
 
-									<Link to={pub.website}>
-										<button
-											className='mt-2 mr-1 font btn btn-dark'
-											type='button'
-										>
-											Visit Pub Website
-										</button>
-									</Link>
+									<a
+										className='mt-2 mr-1 font btn btn-dark'
+										href={pub.website}
+										type='button'
+										target='_blank'
+									>
+										Visit Pub Website
+									</a>
 
 									{Authorization.isAuthenticated() ? (
 										<Link to='/events/new'>
