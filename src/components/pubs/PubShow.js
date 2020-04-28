@@ -103,10 +103,12 @@ export default class PubShow extends React.Component {
 									>
 										<div>
 											<textarea
-												className='review-textarea'
+												className='w-100 p-2 rounded no-line'
 												placeholder='Add a review'
 												onChange={this.handleChange}
 												value={text}
+												rows='3'
+												style={{ resize: 'none' }}
 											/>
 										</div>
 
