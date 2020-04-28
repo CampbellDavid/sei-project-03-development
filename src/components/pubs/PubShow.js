@@ -84,88 +84,94 @@ export default class PubShow extends React.Component {
 			<div className='bg-image'>
 				<div className='bg-fade-high'>
 					<div className='body-div'>
-						<div className='m-3'>
-							<h1 className='text-center font text-1-white'>{pub.name}</h1>
-						</div>
-
-						<div className='row font text-3'>
-							<div className='col-md-6 p-5'>
-								<img
-									src={pub.image}
-									alt={pub.name}
-									className='img-responsive rounded mb-3 w-100'
-								/>
-
-								{Authorization.isAuthenticated() && (
-									<form
-										className='review-form'
-										onSubmit={this.handleSubmitReview}
-									>
-										<div>
-											<textarea
-												className='w-100 p-2 rounded no-line'
-												placeholder='Add a review'
-												onChange={this.handleChange}
-												value={text}
-												rows='3'
-												style={{ resize: 'none' }}
-											/>
-										</div>
-
-										<div>
-											<button className='mt-2 font btn btn-dark' type='submit'>
-												Add
-											</button>
-										</div>
-									</form>
-								)}
+						<section style={{ overflowX: 'hidden' }}>
+							<div className='m-3'>
+								<h1 className='text-center font text-1-white'>{pub.name}</h1>
 							</div>
 
-							<div className='col-md-6 p-5'>
-								<StarRating />
-								<p className='text-justify'>{pub.description}</p>
-								<a href={pub.website} target='_blank'>
-									Visit Pub Website
-								</a>
+							<div className='row font text-3'>
+								<div className='col-md-6 p-5'>
+									<img
+										src={pub.image}
+										alt={pub.name}
+										className='img-responsive rounded mb-3 w-100'
+									/>
 
-								{Authorization.isAuthenticated() ? (
-									<div>
-										<Link to='/events/new'>
-											<button className='mt-2 font btn btn-dark' type='button'>
-												New Event
-											</button>
-										</Link>
-
-										{this.isPubOwner() && (
+									{Authorization.isAuthenticated() && (
+										<form
+											className='review-form'
+											onSubmit={this.handleSubmitReview}
+										>
 											<div>
-												<Link to={`/pubs/${pubId}/edit`}>
-													<button
-														className='mt-2 font btn btn-dark'
-														type='button'
-													>
-														Edit Pub
-													</button>
-												</Link>
+												<textarea
+													className='w-100 p-2 rounded no-line'
+													placeholder='Add a review'
+													onChange={this.handleChange}
+													value={text}
+													rows='3'
+													style={{ resize: 'none' }}
+												/>
+											</div>
+
+											<div>
 												<button
-													className='mt-2 font btn btn-danger'
-													onClick={this.handleDelete}
+													className='mt-2 font btn btn-dark'
+													type='submit'
 												>
-													Delete Pub
+													Add
 												</button>
 											</div>
-										)}
-									</div>
-								) : null}
+										</form>
+									)}
+								</div>
 
-								<div className='sidebar'>
-									<div className='address'>
+								<div className='col-md-6 p-5'>
+									<StarRating />
+									<p className='text-justify'>{pub.description}</p>
+									<a href={pub.website} target='_blank'>
+										Visit Pub Website
+									</a>
+
+									{Authorization.isAuthenticated() ? (
+										<div>
+											<Link to='/events/new'>
+												<button
+													className='mt-2 font btn btn-dark'
+													type='button'
+												>
+													New Event
+												</button>
+											</Link>
+
+											{this.isPubOwner() && (
+												<div>
+													<Link to={`/pubs/${pubId}/edit`}>
+														<button
+															className='mt-2 font btn btn-dark'
+															type='button'
+														>
+															Edit Pub
+														</button>
+													</Link>
+													<button
+														className='mt-2 font btn btn-danger'
+														onClick={this.handleDelete}
+													>
+														Delete Pub
+													</button>
+												</div>
+											)}
+										</div>
+									) : null}
+
+									<div className='m-2'>
 										<h2>Address</h2>
 										<p>{pub.city}</p>
 										<p>{pub.postcode}</p>
 										<p>{pub.phone}</p>
 									</div>
 
-									<div className='quiz-info'>
+									<div className='m-2'>
 										<h2>Quiz information</h2>
 										<p>Maximum team size: {pub.maxTeamSize}</p>
 										<p>Day of quiz: {pub.quizDay}</p>
@@ -173,28 +179,28 @@ export default class PubShow extends React.Component {
 										<p>Average cost of a pint: {pub.averagePintCost}</p>
 									</div>
 								</div>
-							</div>
-							<div className='reviews'>
-								<ul>
-									{pub.reviews.length < 1
-										? null
-										: pub.reviews.map((review) => (
-												<li key={review._id}>
-													{review.text}
+								<div className='reviews'>
+									<ul>
+										{pub.reviews.length < 1
+											? null
+											: pub.reviews.map((review) => (
+													<li key={review._id}>
+														{review.text}
 
-													<button
-														onClick={this.handleDeleteReview}
-														name={review._id}
-														type='submit'
-														className='mt-2 font btn btn-danger'
-													>
-														Delete
-													</button>
-												</li>
-										  ))}
-								</ul>
+														<button
+															onClick={this.handleDeleteReview}
+															name={review._id}
+															type='submit'
+															className='mt-2 font btn btn-danger'
+														>
+															Delete
+														</button>
+													</li>
+											  ))}
+									</ul>
+								</div>
 							</div>
-						</div>
+						</section>
 					</div>
 				</div>
 			</div>

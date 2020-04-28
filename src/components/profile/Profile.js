@@ -44,46 +44,51 @@ class Profile extends React.Component {
 			<div className='bg-image'>
 				<div className='bg-fade-high'>
 					<div className='body-div'>
-						<div className='m-3'>
-							<h1 className='text-center font text-1'>
-								{username.charAt(0).toUpperCase() +
-									username.slice(1, username.length)}
-								's profile
-							</h1>
-						</div>
+						<section style={{ overflowX: 'hidden' }}>
+							<div className='m-3'>
+								<h1 className='text-center font text-1'>
+									{username.charAt(0).toUpperCase() +
+										username.slice(1, username.length)}
+									's profile
+								</h1>
+							</div>
 
-						<div className='row text-center center-y'>
-							<div className='col-md-6'>
-								<img className='profile-img' src={profileImage} />
+							<div className='row text-center center-y'>
+								<div className='col-md-6'>
+									<img className='profile-img m-4' src={profileImage} />
+								</div>
+
+								<div className='col-md-6 text-left font text-3'>
+									<div className='m-4'>
+										<p className='text-justify'>{bio}</p>
+										<p>
+											<span>Favourite Drinks: </span>
+											{favouriteDrinks}
+										</p>
+										<p>
+											<span>Quiz Strengths: </span>
+											{quizStrengths}
+										</p>
+										<p>
+											<span>Peronality Type: </span>
+											{personalityType}
+										</p>
+										<p>
+											<span>{email}</span>
+										</p>
+									</div>
+								</div>
 							</div>
-							<div className='col-md-6 text-left font text-3'>
-								<p className='text-justify'>{bio}</p>
-								<p>
-									<span>Favourite Drinks: </span>
-									{favouriteDrinks}
-								</p>
-								<p>
-									<span>Quiz Strengths: </span>
-									{quizStrengths}
-								</p>
-								<p>
-									<span>Peronality Type: </span>
-									{personalityType}
-								</p>
-								<p>
-									<span>{email}</span>
-								</p>
+							<div className='text-center p-4'>
+								{this.isOwner() && (
+									<Link to={`/profiles/${userId}/edit`}>
+										<button type='button' className='m-2 font btn btn-dark'>
+											Edit Profile
+										</button>
+									</Link>
+								)}
 							</div>
-						</div>
-						<div className='text-center p-4'>
-							{this.isOwner() && (
-								<Link to={`/profiles/${userId}/edit`}>
-									<button type='button' className='m-2 font btn btn-dark'>
-										Edit Profile
-									</button>
-								</Link>
-							)}
-						</div>
+						</section>
 					</div>
 				</div>
 			</div>
