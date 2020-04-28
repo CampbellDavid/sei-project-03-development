@@ -89,17 +89,39 @@ export default class PubShow extends React.Component {
 						</div>
 
 						<div className='row font text-3'>
-							<div className='col-md-6'>
+							<div className='col-md-6 p-5'>
 								<img
 									src={pub.image}
 									alt={pub.name}
 									className='img-responsive rounded mb-3 w-100'
 								/>
+
+								{Authorization.isAuthenticated() && (
+									<form
+										className='review-form'
+										onSubmit={this.handleSubmitReview}
+									>
+										<div>
+											<textarea
+												className='review-textarea'
+												placeholder='Add a review'
+												onChange={this.handleChange}
+												value={text}
+											/>
+										</div>
+
+										<div>
+											<button className='m-5 font btn btn-dark' type='submit'>
+												Add
+											</button>
+										</div>
+									</form>
+								)}
 							</div>
 
-							<div className='col-md-6'>
+							<div className='col-md-6 p-5'>
 								<StarRating />
-								<p>{pub.description}</p>
+								<p className='text-justify'>{pub.description}</p>
 								<a href={pub.website} target='_blank'>
 									Visit Pub Website
 								</a>
@@ -170,28 +192,6 @@ export default class PubShow extends React.Component {
 										  ))}
 								</ul>
 							</div>
-
-							{Authorization.isAuthenticated() && (
-								<form
-									className='review-form'
-									onSubmit={this.handleSubmitReview}
-								>
-									<div>
-										<textarea
-											className='review-textarea'
-											placeholder='Add a review'
-											onChange={this.handleChange}
-											value={text}
-										/>
-									</div>
-
-									<div>
-										<button className='m-5 font btn btn-dark' type='submit'>
-											Add
-										</button>
-									</div>
-								</form>
-							)}
 						</div>
 					</div>
 				</div>
