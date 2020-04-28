@@ -48,11 +48,13 @@ export default class EventShow extends React.Component {
 									Join a team at this event
 								</h2>
 							</div>
-							<div className='col-12'>
-								<div className='center-x'>
-									{this.state.teams.teams.map((team) => (
-										<TeamCard key={team._id} {...team} />
-									))}
+							<div className='row'>
+								<div className='col-lg-12'>
+									<div className='center-x'>
+										{this.state.teams.teams.map((team) => (
+											<TeamCard key={team._id} {...team} />
+										))}
+									</div>
 								</div>
 							</div>
 						</div>
