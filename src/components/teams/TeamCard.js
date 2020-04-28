@@ -61,13 +61,16 @@ class TeamCard extends React.Component {
 			<Card
 				className='mb-4 mr-3 ml-3'
 				bg='dark'
-				style={{ width: '16rem', height: '26rem' }}
+				style={{ width: '16rem', height: '24rem' }}
 			>
 				<Card.Header className='font text-light bg-secondary'>
 					{team.teamName}
 				</Card.Header>
 				<Card.Body>
-					<Card.Text className='font text-light'>
+					<Card.Text
+						className='font text-light'
+						style={{ overflowX: 'hidden' }}
+					>
 						Captain:
 						<br />
 						<Link to={`/profiles/${team.captain._id}`}>
