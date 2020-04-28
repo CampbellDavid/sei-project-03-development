@@ -60,22 +60,11 @@ class Profile extends React.Component {
 
 								<div className='col-md-6 text-left font text-3'>
 									<div className='m-4'>
-										<p className='text-justify'>{bio}</p>
-										<p>
-											<span>Favourite Drinks: </span>
-											{favouriteDrinks}
-										</p>
-										<p>
-											<span>Quiz Strengths: </span>
-											{quizStrengths}
-										</p>
-										<p>
-											<span>Peronality Type: </span>
-											{personalityType}
-										</p>
-										<p>
-											<span>{email}</span>
-										</p>
+										<p className='text-justify'>About: {bio}</p>
+										<p>Favourite Drinks: {favouriteDrinks}</p>
+										<p>Quiz Strengths: {quizStrengths}</p>
+										<p>Peronality Type: {personalityType}</p>
+										<p>Email: {email}</p>
 									</div>
 								</div>
 							</div>
