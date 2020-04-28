@@ -6,166 +6,185 @@ import StarRating from '../common/StarRating'
 import Authorization from '../../../lib/authorization'
 
 export default class PubShow extends React.Component {
-  state = {
-    pub: null,
-    text: '',
-    errors: {}
-  }
+	state = {
+		pub: null,
+		text: '',
+		errors: {},
+	}
 
-  async componentDidMount() {
-    const pubId = this.props.match.params.id
-    try {
-      const res = await axios.get(`/api/pubs/${pubId}`)
-      this.setState({ pub: res.data })
-    } catch (err) {
-      console.log(err)
-    }
-  }
+	async componentDidMount() {
+		const pubId = this.props.match.params.id
+		try {
+			const res = await axios.get(`/api/pubs/${pubId}`)
+			this.setState({ pub: res.data })
+		} catch (err) {
+			console.log(err)
+		}
+	}
 
-  handleDelete = async () => {
-    const pubId = this.props.match.params.id
-    try {
-      await axios.delete(`/api/pubs/${pubId}`, {
-        headers: { Authorization: `Bearer ${Authorization.getToken()}` }
-      })
-      this.props.history.push('/pubs')
-    } catch (err) {
-      this.props.history.push('/unknown')
-    }
-  }
+	handleDelete = async () => {
+		const pubId = this.props.match.params.id
+		try {
+			await axios.delete(`/api/pubs/${pubId}`, {
+				headers: { Authorization: `Bearer ${Authorization.getToken()}` },
+			})
+			this.props.history.push('/pubs')
+		} catch (err) {
+			this.props.history.push('/unknown')
+		}
+	}
 
-  handleDeleteReview = async (e) => {
-    e.preventDefault()
-    const pubId = this.props.match.params.id
-    const reviewId = e.target.name
-    try {
-      await axios.delete(`/api/pubs/${pubId}/reviews/${reviewId}`, {
-        headers: { Authorization: `Bearer ${Authorization.getToken()}` }
-      })
-    } catch (err) {
-      console.log(err)
-    }
-    this.componentDidMount()
-  }
+	handleDeleteReview = async (e) => {
+		e.preventDefault()
+		const pubId = this.props.match.params.id
+		const reviewId = e.target.name
+		try {
+			await axios.delete(`/api/pubs/${pubId}/reviews/${reviewId}`, {
+				headers: { Authorization: `Bearer ${Authorization.getToken()}` },
+			})
+		} catch (err) {
+			console.log(err)
+		}
+		this.componentDidMount()
+	}
 
-  handleSubmitReview = async (event) => {
-    event.preventDefault()
-    const pubId = this.props.match.params.id
-    try {
-      await axios.post(`/api/pubs/${pubId}/reviews`, { text: this.state.text }, {
-        headers: { Authorization: `Bearer ${Authorization.getToken()}` }
-      })
-      this.setState({ text: '' })
-    } catch (err) {
-      this.setState({ errors: err.response.data.errors })
-    }
-    this.componentDidMount()
-  }
+	handleSubmitReview = async (event) => {
+		event.preventDefault()
+		const pubId = this.props.match.params.id
+		try {
+			await axios.post(
+				`/api/pubs/${pubId}/reviews`,
+				{ text: this.state.text },
+				{
+					headers: { Authorization: `Bearer ${Authorization.getToken()}` },
+				}
+			)
+			this.setState({ text: '' })
+		} catch (err) {
+			this.setState({ errors: err.response.data.errors })
+		}
+		this.componentDidMount()
+	}
 
-  handleChange = e => {
-    const text = e.target.value
-    this.setState({ text })
-  }
+	handleChange = (e) => {
+		const text = e.target.value
+		this.setState({ text })
+	}
 
-  isPubOwner = () => {
-    return Authorization.getPayload().sub === this.state.pub.user._id
-  }
+	isPubOwner = () => {
+		return Authorization.getPayload().sub === this.state.pub.user._id
+	}
 
-  render() {
-    if (!this.state.pub) return null
-    const { pub, text } = this.state
-    const pubId = this.props.match.params.id
+	render() {
+		if (!this.state.pub) return null
+		const { pub, text } = this.state
+		const pubId = this.props.match.params.id
 
-    return (
-      <>
-        <div className="pub-show">
-          <div className="pub-info">
-            <h1>{pub.name}</h1>
-            <StarRating />
+		return (
+			<div className='bg-image'>
+				<div className='bg-fade-high'>
+					<div className='body-div'>
+						<div className='m-3'>
+							<h1 className='text-center font text-1-white'>{pub.name}</h1>
+						</div>
 
-            <figure className="pub-image">
-              <img src={pub.image} />
-            </figure>
-            <p>{pub.description}</p>
-            <a href={pub.website}>Visit Pub Website</a>
+						<div className='row'>
+							<div className='col-md-6'>
+								<img src={pub.image} alt={pub.name} />
+							</div>
 
-            {Authorization.isAuthenticated() ?
-              <div>
-                <Link to="/events/new">
-                  <button
-                    className="button"
-                    type="button">New Event</button>
-                </Link>
+							<div className='col-md-6'>
+								<StarRating />
+								<p>{pub.description}</p>
+								<a href={pub.website}>Visit Pub Website</a>
 
-                {this.isPubOwner() &&
-                  <div>
-                    <Link to={`/pubs/${pubId}/edit`}>
-                      <button
-                        className="button"
-                        type="button">Edit Pub</button>
-                    </Link>
-                    <button className="button" onClick={this.handleDelete}>Delete Pub</button>
-                  </div>}
+								{Authorization.isAuthenticated() ? (
+									<div>
+										<Link to='/events/new'>
+											<button className='button' type='button'>
+												New Event
+											</button>
+										</Link>
 
+										{this.isPubOwner() && (
+											<div>
+												<Link to={`/pubs/${pubId}/edit`}>
+													<button className='button' type='button'>
+														Edit Pub
+													</button>
+												</Link>
+												<button className='button' onClick={this.handleDelete}>
+													Delete Pub
+												</button>
+											</div>
+										)}
+									</div>
+								) : null}
+							</div>
 
-              </div>
-              : null}
-          </div>
+							<div className='sidebar'>
+								<div className='address'>
+									<h2>Address Info:</h2>
+									<p>{pub.city}</p>
+									<p>{pub.postcode}</p>
+									<p>{pub.phone}</p>
+								</div>
 
-          <div className="sidebar">
-            <div className="address">
-              <h2>Address Info:</h2>
-              <p>{pub.city}</p>
-              <p>{pub.postcode}</p>
-              <p>{pub.phone}</p>
-            </div>
+								<div className='quiz-info'>
+									<h2>Quiz Info:</h2>
+									<p>Maximum Team size: {pub.maxTeamSize}</p>
+									<p>Day of Quiz: {pub.quizDay}</p>
+									<p>Time of Quiz: {pub.quizTime}</p>
+									<p>Average Cost of a Pint: {pub.averagePintCost}</p>
+								</div>
+							</div>
 
-            <div className="quiz-info">
-              <h2>Quiz Info:</h2>
-              <p>Maximum Team size: {pub.maxTeamSize}</p>
-              <p>Day of Quiz: {pub.quizDay}</p>
-              <p>Time of Quiz: {pub.quizTime}</p>
-              <p>Average Cost of a Pint: {pub.averagePintCost}</p>
-            </div>
-          </div>
+							<div className='reviews'>
+								<ul>
+									{pub.reviews.length < 1
+										? null
+										: pub.reviews.map((review) => (
+												<li key={review._id}>
+													{review.text}
 
-          <div className="reviews">
+													<button
+														onClick={this.handleDeleteReview}
+														name={review._id}
+														type='submit'
+														className='button'
+													>
+														Delete
+													</button>
+												</li>
+										  ))}
+								</ul>
+							</div>
 
-            <ul>{pub.reviews.length < 1 ?
-              null :
-              pub.reviews.map(review => (
-                <li key={review._id}>
-                  {review.text}
+							{Authorization.isAuthenticated() && (
+								<form
+									className='review-form'
+									onSubmit={this.handleSubmitReview}
+								>
+									<div>
+										<textarea
+											className='review-textarea'
+											placeholder='Add a review'
+											onChange={this.handleChange}
+											value={text}
+										/>
+									</div>
 
-                  <button
-                    onClick={this.handleDeleteReview}
-                    name={review._id}
-                    type="submit"
-                    className="button">
-                    Delete</button>
-                </li>))}
-            </ul>
-          </div>
-
-          {Authorization.isAuthenticated() && <form className="review-form" onSubmit={this.handleSubmitReview}>
-            <div>
-              <textarea
-                className="review-textarea"
-                placeholder="Add a review"
-                onChange={this.handleChange}
-                value={text}
-              />
-            </div>
-
-            <div>
-              <button className="button" type="submit">Add</button>
-            </div>
-
-          </form>}
-
-        </div>
-
-      </>
-    )
-  }
+									<div>
+										<button className='button' type='submit'>
+											Add
+										</button>
+									</div>
+								</form>
+							)}
+						</div>
+					</div>
+				</div>
+			</div>
+		)
+	}
 }

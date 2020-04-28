@@ -39,25 +39,24 @@ export default class EventShow extends React.Component {
 			<div className='bg-image'>
 				<div className='bg-fade'>
 					<div className='body-div'>
-						<div className='event-show'>
-							<div className='m-3'>
-								<h1 className='text-center font text-1-white'>
-									{this.state.event.pub}
-								</h1>
-								<h2 className='text-center font text-2-white'>
-									Join a team at this event
-								</h2>
-							</div>
-							<div className='row'>
-								<div className='col-lg-12'>
-									<div className='center-x'>
-										{this.state.teams.teams.map((team) => (
-											<TeamCard key={team._id} {...team} />
-										))}
-									</div>
+						<div className='m-3'>
+							<h1 className='text-center font text-1-white'>
+								{this.state.event.pub}
+							</h1>
+							<h2 className='text-center font text-2-white'>
+								Join a team at this event
+							</h2>
+						</div>
+						<div className='row'>
+							<div className='col-lg-12'>
+								<div className='center-x'>
+									{this.state.teams.teams.map((team) => (
+										<TeamCard key={team._id} {...team} />
+									))}
 								</div>
 							</div>
 						</div>
+
 						<div className='text-center'>
 							{Authorization.isAuthenticated() ? (
 								<Link to={`/events/${eventId}/teams/new`}>
