@@ -4,7 +4,7 @@ import { Card, Button } from 'react-bootstrap'
 import Image from '../../assets/images/wine-glass.png'
 
 const EventCard = ({ pub, entryFee, quizDay, quizTime, _id }) => (
-	<Card className='m-3' bg='dark' style={{ width: '16rem' }}>
+	<Card className='mb-4 mr-3 ml-3' bg='dark' style={{ width: '16rem' }}>
 		<Card.Header className='font text-light bg-secondary'>{pub}</Card.Header>
 		<Card.Body>
 			<Card.Title className='font text-light'>{entryFee}</Card.Title>
