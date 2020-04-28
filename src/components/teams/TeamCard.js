@@ -2,6 +2,7 @@ import React from 'react'
 import Authorization from '../../../lib/authorization'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { Card, Button } from 'react-bootstrap'
 
 class TeamCard extends React.Component {
 	state = {
@@ -57,49 +58,53 @@ class TeamCard extends React.Component {
 		const { team } = this.state
 
 		return (
-			<div className='team-card p-2 m-2 rounded'>
-				<div>
-					<h2 className='text-center font text-2'>{team.teamName}</h2>
-				</div>
-				<p className='font text-3'>Captain: {team.captain.username}</p>
-				<p className='font text-3'>
-					Members:{' '}
-					{team.members.map((member, i) => {
-						return (
-							<li key={i}>
-								<Link to={`/profiles/${member._id}`}>{member.username}</Link>
-							</li>
-						)
-					})}
-				</p>
-
-				{Authorization.isAuthenticated() ? (
-					<div className='text-center'>
-						{team.members.some((member) => member._id === userId) ? (
-							<button
-								type='button'
-								className='m-5 font btn btn-dark'
-								onClick={this.handleClick}
-							>
-								Leave Team
-							</button>
-						) : (
-							<button
-								type='button'
-								className='m-5 font btn btn-dark'
-								onClick={this.handleClick}
-							>
-								Join Team
-							</button>
-						)}
-						{this.isOwner() && (
-							<button type='button' className='m-5 font btn btn-dark'>
-								Edit Team
-							</button>
-						)}
-					</div>
-				) : null}
-			</div>
+			<Card className='mb-4 mr-3 ml-3' bg='dark' style={{ width: '16rem' }}>
+				<Card.Header className='font text-light bg-secondary'>
+					{team.teamName}
+				</Card.Header>
+				<Card.Body>
+					<Card.Text className='font text-light'>
+						Captain: {team.captain.username}
+						<br />
+						Members:{' '}
+						{team.members.map((member, i) => {
+							return (
+								<li key={i}>
+									<Link to={`/profiles/${member._id}`}>{member.username}</Link>
+								</li>
+							)
+						})}
+					</Card.Text>
+				</Card.Body>
+				<Card.Footer>
+					{Authorization.isAuthenticated() ? (
+						<div className='text-center'>
+							{team.members.some((member) => member._id === userId) ? (
+								<Button
+									variant='light'
+									className='font text-dark'
+									onClick={this.handleClick}
+								>
+									Leave Team
+								</Button>
+							) : (
+								<Button
+									variant='light'
+									className='font text-dark'
+									onClick={this.handleClick}
+								>
+									Join Team
+								</Button>
+							)}
+							{this.isOwner() && (
+								<Button variant='light' className='font text-dark'>
+									Edit Team
+								</Button>
+							)}
+						</div>
+					) : null}
+				</Card.Footer>
+			</Card>
 		)
 	}
 }
