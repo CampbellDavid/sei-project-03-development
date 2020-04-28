@@ -52,7 +52,7 @@ class Profile extends React.Component {
 							</h1>
 						</div>
 
-						<div className='row text-center'>
+						<div className='row text-center center-y'>
 							<div className='col-md-6'>
 								<img className='profile-img' src={profileImage} />
 							</div>
