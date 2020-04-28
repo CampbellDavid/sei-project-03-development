@@ -131,7 +131,7 @@ export default class PubShow extends React.Component {
 								{Authorization.isAuthenticated() ? (
 									<div>
 										<Link to='/events/new'>
-											<button className='m-5 font btn btn-dark' type='button'>
+											<button className='mt-2 font btn btn-dark' type='button'>
 												New Event
 											</button>
 										</Link>
@@ -140,14 +140,14 @@ export default class PubShow extends React.Component {
 											<div>
 												<Link to={`/pubs/${pubId}/edit`}>
 													<button
-														className='m-5 font btn btn-dark'
+														className='mt-2 font btn btn-dark'
 														type='button'
 													>
 														Edit Pub
 													</button>
 												</Link>
 												<button
-													className='m-5 font btn btn-danger'
+													className='mt-2 font btn btn-danger'
 													onClick={this.handleDelete}
 												>
 													Delete Pub
@@ -186,7 +186,7 @@ export default class PubShow extends React.Component {
 														onClick={this.handleDeleteReview}
 														name={review._id}
 														type='submit'
-														className='m-5 font btn btn-danger'
+														className='mt-2 font btn btn-danger'
 													>
 														Delete
 													</button>
