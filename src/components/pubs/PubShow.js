@@ -125,7 +125,7 @@ export default class PubShow extends React.Component {
 									)}
 
 									<div className='mt-3'>
-										<ul className='review-list'>
+										<ul className='no-style-list'>
 											{pub.reviews.length < 1
 												? null
 												: pub.reviews.map((review) => (

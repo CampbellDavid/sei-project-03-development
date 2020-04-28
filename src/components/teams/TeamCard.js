@@ -58,22 +58,35 @@ class TeamCard extends React.Component {
 		const { team } = this.state
 
 		return (
-			<Card className='mb-4 mr-3 ml-3' bg='dark' style={{ width: '16rem' }}>
+			<Card
+				className='mb-4 mr-3 ml-3'
+				bg='dark'
+				style={{ width: '16rem', height: '26rem' }}
+			>
 				<Card.Header className='font text-light bg-secondary'>
 					{team.teamName}
 				</Card.Header>
 				<Card.Body>
 					<Card.Text className='font text-light'>
-						Captain: {team.captain.username}
+						Captain:
+						<br />
+						<Link to={`/profiles/${team.captain._id}`}>
+							{team.captain.username}
+						</Link>
+						<br />
 						<br />
 						Members:{' '}
-						{team.members.map((member, i) => {
-							return (
-								<li key={i}>
-									<Link to={`/profiles/${member._id}`}>{member.username}</Link>
-								</li>
-							)
-						})}
+						<ul className='no-style-list'>
+							{team.members.map((member, i) => {
+								return (
+									<li key={i}>
+										<Link to={`/profiles/${member._id}`}>
+											{member.username}
+										</Link>
+									</li>
+								)
+							})}
+						</ul>
 					</Card.Text>
 				</Card.Body>
 				<Card.Footer>
