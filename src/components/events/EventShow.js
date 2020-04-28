@@ -39,30 +39,32 @@ export default class EventShow extends React.Component {
 			<div className='bg-image'>
 				<div className='bg-fade-high'>
 					<div className='body-div'>
-						<div className='m-3'>
-							<h1 className='text-center font text-1'>
-								{this.state.event.pub}
-							</h1>
-							<h2 className='text-center font text-2'>
-								Join a team at this event
-							</h2>
-						</div>
+						<section style={{ overflowX: 'hidden' }}>
+							<div className='m-3'>
+								<h1 className='text-center font text-1'>
+									{this.state.event.pub}
+								</h1>
+								<h2 className='text-center font text-2'>
+									Join a team at this event
+								</h2>
+							</div>
 
-						<div className='row center-x'>
-							{this.state.teams.teams.map((team) => (
-								<TeamCard key={team._id} {...team} />
-							))}
-						</div>
+							<div className='row center-x'>
+								{this.state.teams.teams.map((team) => (
+									<TeamCard key={team._id} {...team} />
+								))}
+							</div>
 
-						<div className='text-center'>
-							{Authorization.isAuthenticated() ? (
-								<Link to={`/events/${eventId}/teams/new`}>
-									<button type='button' className='m-5 font btn btn-dark'>
-										New Team
-									</button>
-								</Link>
-							) : null}
-						</div>
+							<div className='text-center'>
+								{Authorization.isAuthenticated() ? (
+									<Link to={`/events/${eventId}/teams/new`}>
+										<button type='button' className='m-5 font btn btn-dark'>
+											New Team
+										</button>
+									</Link>
+								) : null}
+							</div>
+						</section>
 					</div>
 				</div>
 			</div>
