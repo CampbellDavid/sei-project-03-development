@@ -73,13 +73,13 @@ class Profile extends React.Component {
 											<h3 className='font text-3 font-weight-bold mb-1'>
 												Favourite Drinks:{' '}
 											</h3>
-											<p>{favouriteDrinks}</p>
+											<p>{favouriteDrinks.join(', ')}</p>
 										</p>
 										<p className='mt-4'>
 											<h3 className='font text-3 font-weight-bold mb-1'>
 												Quiz Strengths:{' '}
 											</h3>
-											<p>{quizStrengths}</p>
+											<p>{quizStrengths.join(', ')}</p>
 										</p>
 										<p className='mt-4'>
 											<h3 className='font text-3 font-weight-bold mb-1'>
