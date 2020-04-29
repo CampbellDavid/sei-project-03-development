@@ -13,7 +13,7 @@ const errorHandler = require('./lib/errorHandler')
 mongoose.connect(
 	dbURI,
 	{ useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
-	err => {
+	(err) => {
 		if (err) return console.log(err)
 		console.log('Mongo Connected')
 	}
