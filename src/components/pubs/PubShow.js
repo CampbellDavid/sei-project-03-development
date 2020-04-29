@@ -152,49 +152,50 @@ export default class PubShow extends React.Component {
 								<div className='col-md-6 p-5'>
 									<StarRating />
 									<p className='text-justify'>{pub.description}</p>
+									<div>
+										<a
+											className='mt-2 mr-2 font btn btn-dark'
+											href={pub.website}
+											type='button'
+											target='_blank'
+										>
+											Visit Pub Website
+										</a>
 
-									<a
-										className='mt-2 mr-1 font btn btn-dark'
-										href={pub.website}
-										type='button'
-										target='_blank'
-									>
-										Visit Pub Website
-									</a>
+										{Authorization.isAuthenticated() ? (
+											<Link to='/events/new'>
+												<button
+													className='mt-2 mr-2 font btn btn-dark'
+													type='button'
+												>
+													New Event
+												</button>
+											</Link>
+										) : null}
 
-									{Authorization.isAuthenticated() ? (
-										<Link to='/events/new'>
-											<button
-												className='mt-2 ml-1 mr-1 font btn btn-dark'
-												type='button'
-											>
-												New Event
-											</button>
-										</Link>
-									) : null}
-
-									{Authorization.isAuthenticated() ? (
-										<div>
-											{this.isPubOwner() && (
-												<div>
-													<Link to={`/pubs/${pubId}/edit`}>
+										{Authorization.isAuthenticated() ? (
+											<div>
+												{this.isPubOwner() && (
+													<div>
+														<Link to={`/pubs/${pubId}/edit`}>
+															<button
+																className='mt-2 mr-2 font btn btn-dark'
+																type='button'
+															>
+																Edit Pub
+															</button>
+														</Link>
 														<button
-															className='mt-2 ml-1 font btn btn-dark'
-															type='button'
+															className='mt-2 mr-2 font btn btn-danger'
+															onClick={this.handleDelete}
 														>
-															Edit Pub
+															Delete Pub
 														</button>
-													</Link>
-													<button
-														className='mt-2 ml-1 font btn btn-danger'
-														onClick={this.handleDelete}
-													>
-														Delete Pub
-													</button>
-												</div>
-											)}
-										</div>
-									) : null}
+													</div>
+												)}
+											</div>
+										) : null}
+									</div>
 
 									<div className='mt-4'>
 										<h2 className='text-2'>Address</h2>
