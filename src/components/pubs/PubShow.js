@@ -198,7 +198,7 @@ export default class PubShow extends React.Component {
 									</div>
 
 									<div className='mt-4'>
-										<h2 className='text-2'>Address</h2>
+										<h2 className='text-2'>Contact Details</h2>
 										<p className='m-0 p-0'>{pub.name}</p>
 										<p className='m-0 p-0'>{pub.streetName}</p>
 										<p className='m-0 p-0'>{pub.city}</p>
