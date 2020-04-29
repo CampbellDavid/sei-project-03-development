@@ -193,7 +193,7 @@ export default class PubShow extends React.Component {
 										</div>
 									) : null}
 
-									<div className='m-2'>
+									<div className='mt-4'>
 										<h2 className='text-2'>Address</h2>
 										<p className='m-0 p-0'>{pub.name}</p>
 										<p className='m-0 p-0'>{pub.streetName}</p>
@@ -202,7 +202,7 @@ export default class PubShow extends React.Component {
 										<p className='m-0 p-0'>{pub.phone}</p>
 									</div>
 
-									<div className='m-2'>
+									<div className='mt-4'>
 										<h2 className='text-2'>Additional information</h2>
 										<p className='p-0 m-0'>
 											Maximum team size: {pub.maxTeamSize}
