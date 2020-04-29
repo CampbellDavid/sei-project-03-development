@@ -53,23 +53,40 @@ class Profile extends React.Component {
 								</h1>
 							</div>
 
-							<div className='row text-center center-y'>
-								<div className='col-md-6'>
+							<div className='row center-y'>
+								<div className='col-md-6 center-x p-0'>
 									<img className='profile-img m-4' src={profileImage} />
 								</div>
 
-								<div className='col-md-6 text-left font text-3'>
-									<div className='m-4'>
+								<div className='col-md-6 text-left font text-3 p-0'>
+									<div className='m-4 p-4'>
 										<p className='text-justify'>
-											About{' '}
-											{username.charAt(0).toUpperCase() +
-												username.slice(1, username.length)}
-											: {bio}
+											<h3 className='font text-3 font-weight-bold mb-1'>
+												About{' '}
+												{username.charAt(0).toUpperCase() +
+													username.slice(1, username.length)}
+												:{' '}
+											</h3>
+											<p>{bio}</p>
 										</p>
-										<p>Favourite Drinks: {favouriteDrinks}</p>
-										<p>Quiz Strengths: {quizStrengths}</p>
-										<p>Peronality Type: {personalityType}</p>
-										<p>Email: {email}</p>
+										<p className='mt-4'>
+											<h3 className='font text-3 font-weight-bold mb-1'>
+												Favourite Drinks:{' '}
+											</h3>
+											<p>{favouriteDrinks}</p>
+										</p>
+										<p className='mt-4'>
+											<h3 className='font text-3 font-weight-bold mb-1'>
+												Quiz Strengths:{' '}
+											</h3>
+											<p>{quizStrengths}</p>
+										</p>
+										<p className='mt-4'>
+											<h3 className='font text-3 font-weight-bold mb-1'>
+												Peronality Type:{' '}
+											</h3>
+											<p>{personalityType}</p>
+										</p>
 									</div>
 								</div>
 							</div>

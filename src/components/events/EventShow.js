@@ -34,6 +34,7 @@ export default class EventShow extends React.Component {
 
 	render() {
 		if (!this.state.event) return null
+		console.log(this.state.teams)
 		const eventId = this.props.match.params.id
 		return (
 			<div className='bg-image'>

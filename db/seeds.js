@@ -20,10 +20,13 @@ mongoose.connect(
 						passwordConfirmation: '1',
 						favouriteDrinks: ['Beer', 'Gin'],
 						personalityType: 'ABCD',
-						bio: 'Bio for user 1',
+						bio:
+							'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
 						age: 30,
 						gender: 'Female',
 						quizStrengths: [],
+						profileImage:
+							'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE4MDAzNDEwNDY4Mzc0MDMw/george-w-bush-9232768-1-402.jpg',
 					},
 					{
 						username: 'Barack H. Obama',
@@ -32,12 +35,13 @@ mongoose.connect(
 						passwordConfirmation: '2',
 						favouriteDrinks: ['Wisky', 'Water'],
 						personalityType: 'EFGH',
-						bio: 'Bio for user 2',
+						bio:
+							'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
 						age: 25,
 						gender: 'Male',
 						quizStrengths: ['Gen Ed'],
 						profileImage:
-							'https://i.insider.com/59c387d3ba785e34910e27b4?width=1100&format=jpeg&auto=webp',
+							'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE4MDAzNDEwNzg5ODI4MTEw/barack-obama-12782369-1-402.jpg',
 					},
 					{
 						username: 'Bill Clinton',
@@ -46,10 +50,13 @@ mongoose.connect(
 						passwordConfirmation: '3',
 						favouriteDrinks: ['White Russian', 'Wine'],
 						personalityType: 'IJKL',
-						bio: 'Bio for user 3',
+						bio:
+							'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
 						age: 28,
 						gender: 'Female',
 						quizStrengths: ['Geography', 'Math'],
+						profileImage:
+							'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTIwNjA4NjMzNzczOTE3NzA4/bill-clinton-9251236-1-402.jpg',
 					},
 					{
 						username: 'Donald Trump',
@@ -58,10 +65,13 @@ mongoose.connect(
 						passwordConfirmation: '4',
 						favouriteDrinks: ['Red Wine', 'Rosé Wine'],
 						personalityType: 'MNOP',
-						bio: 'Bio for user 4',
+						bio:
+							'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
 						age: 26,
 						gender: 'Male',
 						quizStrengths: ['History', 'Politics'],
+						profileImage:
+							'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTY2NzAyMDMwMjQzNTA1NTA0/donald_trump_photo_michael_stewartwireimage_gettyimages-169093538jpg.jpg',
 					},
 				])
 			})
