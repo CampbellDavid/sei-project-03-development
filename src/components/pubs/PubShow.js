@@ -129,14 +129,17 @@ export default class PubShow extends React.Component {
 											{pub.reviews.length < 1
 												? null
 												: pub.reviews.map((review) => (
-														<li className='review-item mb-5' key={review._id}>
+														<li
+															className='review-item mb-5 text-justify'
+															key={review._id}
+														>
 															{review.text}
 
 															<button
 																onClick={this.handleDeleteReview}
 																name={review._id}
 																type='submit'
-																className='float-right mt-2 font btn btn-danger'
+																className='float-right mt-1 font btn btn-danger'
 															>
 																Delete
 															</button>
