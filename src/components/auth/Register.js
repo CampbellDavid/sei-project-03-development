@@ -19,7 +19,7 @@ export default class Register extends React.Component {
 			quizStrengths: '',
 			profileImage: '',
 		},
-		emaiValid: false,
+		emailValid: false,
 		formValid: false,
 		passwordValid: false,
 		formErrors: { email: '', password: '' },
