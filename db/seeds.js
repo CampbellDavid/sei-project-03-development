@@ -23,8 +23,8 @@ mongoose.connect(
 						bio:
 							'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
 						age: 73,
-						gender: 'Female',
-						quizStrengths: [],
+						gender: 'Male',
+						quizStrengths: ['Politics', 'Biology', 'Movies'],
 						profileImage:
 							'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE4MDAzNDEwNDY4Mzc0MDMw/george-w-bush-9232768-1-402.jpg',
 					},
@@ -39,7 +39,7 @@ mongoose.connect(
 							'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
 						age: 58,
 						gender: 'Male',
-						quizStrengths: ['Gen Ed'],
+						quizStrengths: ['General Knowledge, Computer Science'],
 						profileImage:
 							'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE4MDAzNDEwNzg5ODI4MTEw/barack-obama-12782369-1-402.jpg',
 					},
@@ -53,7 +53,7 @@ mongoose.connect(
 						bio:
 							'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
 						age: 73,
-						gender: 'Female',
+						gender: 'Male',
 						quizStrengths: ['Geography', 'Math'],
 						profileImage:
 							'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTIwNjA4NjMzNzczOTE3NzA4/bill-clinton-9251236-1-402.jpg',
