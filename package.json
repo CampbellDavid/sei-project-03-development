@@ -2,8 +2,7 @@
 	"name": "pub-quiz-sei-project",
 	"version": "1.0.0",
 	"main": "index.js",
-	"repository": "git@github.com:davidcampbell-01/pub-quiz-sei-project.git",
-	"author": "David Campbell <dcampbell092@gmail.com>",
+	"repository": "git@github.com:CampbellDavid/sei-project-03-development.git",
 	"license": "MIT",
 	"scripts": {
 		"serve": "webpack-dev-server --mode=development",
