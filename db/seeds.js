@@ -19,10 +19,10 @@ mongoose.connect(
 						password: '1',
 						passwordConfirmation: '1',
 						favouriteDrinks: ['Beer', 'Gin'],
-						personalityType: 'ABCD',
+						personalityType: 'INTJ',
 						bio:
 							'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
-						age: 30,
+						age: 73,
 						gender: 'Female',
 						quizStrengths: [],
 						profileImage:
@@ -34,10 +34,10 @@ mongoose.connect(
 						password: '2',
 						passwordConfirmation: '2',
 						favouriteDrinks: ['Wisky', 'Water'],
-						personalityType: 'EFGH',
+						personalityType: 'ESTJ',
 						bio:
 							'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
-						age: 25,
+						age: 58,
 						gender: 'Male',
 						quizStrengths: ['Gen Ed'],
 						profileImage:
@@ -49,10 +49,10 @@ mongoose.connect(
 						password: '3',
 						passwordConfirmation: '3',
 						favouriteDrinks: ['White Russian', 'Wine'],
-						personalityType: 'IJKL',
+						personalityType: 'INFP',
 						bio:
 							'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
-						age: 28,
+						age: 73,
 						gender: 'Female',
 						quizStrengths: ['Geography', 'Math'],
 						profileImage:
@@ -64,10 +64,10 @@ mongoose.connect(
 						password: '4',
 						passwordConfirmation: '4',
 						favouriteDrinks: ['Red Wine', 'Rosé Wine'],
-						personalityType: 'MNOP',
+						personalityType: 'ENFJ',
 						bio:
 							'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
-						age: 26,
+						age: 73,
 						gender: 'Male',
 						quizStrengths: ['History', 'Politics'],
 						profileImage:
@@ -137,6 +137,42 @@ mongoose.connect(
 						quizTime: '21:00',
 						pub: 'Red Lion',
 						postcode: 'SW1A 2NH',
+						user: createdTeams[2].captain,
+					},
+					{
+						teams: [createdTeams[2], createdTeams[3]],
+						entryFee: '£3',
+						quizDay: 'Wednesday',
+						quizTime: '20:00',
+						pub: 'The George Inn',
+						postcode: 'SE1 1NH',
+						user: createdTeams[2].captain,
+					},
+					{
+						teams: [createdTeams[2], createdTeams[3]],
+						entryFee: '£8',
+						quizDay: 'Thursday',
+						quizTime: '19:30',
+						pub: 'The Nags Head',
+						postcode: 'SW1X 8ED',
+						user: createdTeams[2].captain,
+					},
+					{
+						teams: [createdTeams[2], createdTeams[3]],
+						entryFee: '£4',
+						quizDay: 'Saturday',
+						quizTime: '19:00',
+						pub: 'The Lamb & Flag',
+						postcode: 'WC2E 9EB',
+						user: createdTeams[2].captain,
+					},
+					{
+						teams: [createdTeams[2], createdTeams[3]],
+						entryFee: '£7',
+						quizDay: 'Saturday',
+						quizTime: '18:00',
+						pub: 'The Dog & Duck',
+						postcode: 'W1D 3AJ',
 						user: createdTeams[2].captain,
 					},
 				])
@@ -266,7 +302,7 @@ mongoose.connect(
 						user: createdEvents[0].user,
 					},
 					{
-						name: 'The Dog and Duck',
+						name: 'The Dog & Duck',
 						image:
 							'https://i.pinimg.com/originals/d2/7c/02/d27c02a533348cd2490e96064af440b4.jpg',
 						city: 'London',
